@@ -1,0 +1,11 @@
+e:\UTM\PAD\Lab1\Broker\obj\Debug\netcoreapp2.0\Broker.csprojResolveAssemblyReference.cache
+e:\UTM\PAD\Lab1\Broker\obj\Debug\netcoreapp2.0\Broker.csproj.CoreCompileInputs.cache
+e:\UTM\PAD\Lab1\Broker\obj\Debug\netcoreapp2.0\Broker.AssemblyInfoInputs.cache
+e:\UTM\PAD\Lab1\Broker\obj\Debug\netcoreapp2.0\Broker.AssemblyInfo.cs
+e:\UTM\PAD\Lab1\Broker\bin\Debug\netcoreapp2.0\Broker.deps.json
+e:\UTM\PAD\Lab1\Broker\bin\Debug\netcoreapp2.0\Broker.runtimeconfig.json
+e:\UTM\PAD\Lab1\Broker\bin\Debug\netcoreapp2.0\Broker.runtimeconfig.dev.json
+e:\UTM\PAD\Lab1\Broker\bin\Debug\netcoreapp2.0\Broker.dll
+e:\UTM\PAD\Lab1\Broker\bin\Debug\netcoreapp2.0\Broker.pdb
+e:\UTM\PAD\Lab1\Broker\obj\Debug\netcoreapp2.0\Broker.dll
+e:\UTM\PAD\Lab1\Broker\obj\Debug\netcoreapp2.0\Broker.pdb

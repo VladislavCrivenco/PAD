@@ -1,0 +1,11 @@
+e:\UTM\PAD\Lab1\Subscriber\bin\Debug\netcoreapp2.0\Subscriber.deps.json
+e:\UTM\PAD\Lab1\Subscriber\bin\Debug\netcoreapp2.0\Subscriber.runtimeconfig.json
+e:\UTM\PAD\Lab1\Subscriber\bin\Debug\netcoreapp2.0\Subscriber.runtimeconfig.dev.json
+e:\UTM\PAD\Lab1\Subscriber\bin\Debug\netcoreapp2.0\Subscriber.dll
+e:\UTM\PAD\Lab1\Subscriber\bin\Debug\netcoreapp2.0\Subscriber.pdb
+e:\UTM\PAD\Lab1\Subscriber\obj\Debug\netcoreapp2.0\Subscriber.csprojResolveAssemblyReference.cache
+e:\UTM\PAD\Lab1\Subscriber\obj\Debug\netcoreapp2.0\Subscriber.csproj.CoreCompileInputs.cache
+e:\UTM\PAD\Lab1\Subscriber\obj\Debug\netcoreapp2.0\Subscriber.AssemblyInfoInputs.cache
+e:\UTM\PAD\Lab1\Subscriber\obj\Debug\netcoreapp2.0\Subscriber.AssemblyInfo.cs
+e:\UTM\PAD\Lab1\Subscriber\obj\Debug\netcoreapp2.0\Subscriber.dll
+e:\UTM\PAD\Lab1\Subscriber\obj\Debug\netcoreapp2.0\Subscriber.pdb
