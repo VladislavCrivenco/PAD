@@ -9,3 +9,14 @@ e:\UTM\PAD\Lab1\Subscriber\obj\Debug\netcoreapp2.0\Subscriber.AssemblyInfoInputs
 e:\UTM\PAD\Lab1\Subscriber\obj\Debug\netcoreapp2.0\Subscriber.AssemblyInfo.cs
 e:\UTM\PAD\Lab1\Subscriber\obj\Debug\netcoreapp2.0\Subscriber.dll
 e:\UTM\PAD\Lab1\Subscriber\obj\Debug\netcoreapp2.0\Subscriber.pdb
+C:\Users\Dobri\Desktop\Vlad\PAD\Lab1\Subscriber\bin\Debug\netcoreapp2.0\Subscriber.deps.json
+C:\Users\Dobri\Desktop\Vlad\PAD\Lab1\Subscriber\bin\Debug\netcoreapp2.0\Subscriber.runtimeconfig.json
+C:\Users\Dobri\Desktop\Vlad\PAD\Lab1\Subscriber\bin\Debug\netcoreapp2.0\Subscriber.runtimeconfig.dev.json
+C:\Users\Dobri\Desktop\Vlad\PAD\Lab1\Subscriber\bin\Debug\netcoreapp2.0\Subscriber.dll
+C:\Users\Dobri\Desktop\Vlad\PAD\Lab1\Subscriber\bin\Debug\netcoreapp2.0\Subscriber.pdb
+C:\Users\Dobri\Desktop\Vlad\PAD\Lab1\Subscriber\obj\Debug\netcoreapp2.0\Subscriber.csprojAssemblyReference.cache
+C:\Users\Dobri\Desktop\Vlad\PAD\Lab1\Subscriber\obj\Debug\netcoreapp2.0\Subscriber.csproj.CoreCompileInputs.cache
+C:\Users\Dobri\Desktop\Vlad\PAD\Lab1\Subscriber\obj\Debug\netcoreapp2.0\Subscriber.AssemblyInfoInputs.cache
+C:\Users\Dobri\Desktop\Vlad\PAD\Lab1\Subscriber\obj\Debug\netcoreapp2.0\Subscriber.AssemblyInfo.cs
+C:\Users\Dobri\Desktop\Vlad\PAD\Lab1\Subscriber\obj\Debug\netcoreapp2.0\Subscriber.dll
+C:\Users\Dobri\Desktop\Vlad\PAD\Lab1\Subscriber\obj\Debug\netcoreapp2.0\Subscriber.pdb

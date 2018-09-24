@@ -9,3 +9,14 @@ e:\UTM\PAD\Lab1\Broker\bin\Debug\netcoreapp2.0\Broker.dll
 e:\UTM\PAD\Lab1\Broker\bin\Debug\netcoreapp2.0\Broker.pdb
 e:\UTM\PAD\Lab1\Broker\obj\Debug\netcoreapp2.0\Broker.dll
 e:\UTM\PAD\Lab1\Broker\obj\Debug\netcoreapp2.0\Broker.pdb
+C:\Users\Dobri\Desktop\Vlad\PAD\Lab1\Broker\obj\Debug\netcoreapp2.0\Broker.csprojAssemblyReference.cache
+C:\Users\Dobri\Desktop\Vlad\PAD\Lab1\Broker\obj\Debug\netcoreapp2.0\Broker.csproj.CoreCompileInputs.cache
+C:\Users\Dobri\Desktop\Vlad\PAD\Lab1\Broker\obj\Debug\netcoreapp2.0\Broker.AssemblyInfoInputs.cache
+C:\Users\Dobri\Desktop\Vlad\PAD\Lab1\Broker\obj\Debug\netcoreapp2.0\Broker.AssemblyInfo.cs
+C:\Users\Dobri\Desktop\Vlad\PAD\Lab1\Broker\obj\Debug\netcoreapp2.0\Broker.dll
+C:\Users\Dobri\Desktop\Vlad\PAD\Lab1\Broker\obj\Debug\netcoreapp2.0\Broker.pdb
+C:\Users\Dobri\Desktop\Vlad\PAD\Lab1\Broker\bin\Debug\netcoreapp2.0\Broker.deps.json
+C:\Users\Dobri\Desktop\Vlad\PAD\Lab1\Broker\bin\Debug\netcoreapp2.0\Broker.runtimeconfig.json
+C:\Users\Dobri\Desktop\Vlad\PAD\Lab1\Broker\bin\Debug\netcoreapp2.0\Broker.runtimeconfig.dev.json
+C:\Users\Dobri\Desktop\Vlad\PAD\Lab1\Broker\bin\Debug\netcoreapp2.0\Broker.dll
+C:\Users\Dobri\Desktop\Vlad\PAD\Lab1\Broker\bin\Debug\netcoreapp2.0\Broker.pdb

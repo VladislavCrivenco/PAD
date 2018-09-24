@@ -3,6 +3,7 @@ using System.Net.Sockets;
 using System.Net;
 using System.Text;
 using System.Collections.Generic;
+using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -11,22 +12,13 @@ namespace Brokers
     public class Broker
     {
         private Socket m_mainSocket;
-        private Dictionary<int, Channel> channels;
+        private ConcurrentDictionary<string, Channel> channels;
 
         public Broker()
         {
             Console.WriteLine("Welcome to Broker");
 
-            channels = new Dictionary<int, Channel>();
-
-            var ch = new Channel(10);
-            ch.Events.Add(new Message
-            {
-                ChannelId = 10,
-                Data = "Hello",
-            });
-
-            channels[10] = ch;
+            channels = new ConcurrentDictionary<string, Channel>();
         }
         public void StartListening()
         {
@@ -62,21 +54,18 @@ namespace Brokers
 
         private void ServeClient(Socket clientSocket)
         {
-            Console.WriteLine("Broker is connected to "
-                       + IPAddress.Parse(((IPEndPoint)clientSocket.RemoteEndPoint).Address.ToString())
-                       + "on port number "
-                       + ((IPEndPoint)clientSocket.RemoteEndPoint).Port.ToString()
-                    );
-
             var message = ReadMessage(clientSocket);
             if (message != null)
             {
                 if (message.IsSubscriber)
                 {
+                    Console.WriteLine($"NEW SUBSCRIBER {clientSocket.GetInfo()}\n");
                     ServeSubscriber(clientSocket, message);
                 }
                 else
                 {
+                    Console.WriteLine($"NEW PUBLISHER {clientSocket.GetInfo()}\n");
+
                     ServePublisher(clientSocket, message);
                 }
             }
@@ -98,7 +87,6 @@ namespace Brokers
                 while (!builder.ToString().EndsWith("ENDMSG"));
                 builder.Replace("ENDMSG", "");
 
-                Console.WriteLine("Recieved message " + builder);
                 var message = (Message)Newtonsoft.Json.JsonConvert.DeserializeObject(builder.ToString(), typeof(Message));
 
                 return message;
@@ -114,6 +102,7 @@ namespace Brokers
         {
             do
             {
+                Console.WriteLine($"New message from publisher at channel {message.ChannelId} : **{message.Data}**");
                 if (!channels.ContainsKey(message.ChannelId))
                 {
                     channels[message.ChannelId] = new Channel(message.ChannelId, message);
@@ -129,20 +118,25 @@ namespace Brokers
 
         private void ServeSubscriber(Socket socket, Message message)
         {
-            if (!channels.ContainsKey(message.ChannelId))
-            {
-                channels[message.ChannelId] = new Channel(message.ChannelId);
-            }
-
-            channels[message.ChannelId].Subscribers.Add(
-                new Subscriber
+            do{
+                if (!channels.ContainsKey(message.ChannelId))
                 {
-                    Socket = socket
-                });
+                    channels[message.ChannelId] = new Channel(message.ChannelId);
+                }
 
-            SendMessagesToSubscribers(message.ChannelId, channels[message.ChannelId].Events);
+                channels[message.ChannelId].Subscribers.Add(
+                    new Subscriber
+                    {
+                        Socket = socket
+                    });
+
+                SendMessagesToSubscribers(message.ChannelId, channels[message.ChannelId].Events);
+
+                message = ReadMessage(socket);
+            } while(message != null); 
+
         }
-        private void SendMessagesToSubscribers(int channelId, List<Message> messages)
+        private void SendMessagesToSubscribers(string channelId, List<Message> messages)
         {
             if (channels.ContainsKey(channelId))
             {
@@ -164,7 +158,7 @@ namespace Brokers
                     byte[] data = Encoding.UTF8.GetBytes(json);
 
                     socket.Send(data);
-                    Console.WriteLine("Messages sent: {0}", json);
+                    Console.WriteLine("Messages sent to subscriber " + socket.GetInfo());
                 }
                 catch (Exception e)
                 {

@@ -2,20 +2,19 @@ using System;
 using System.Net.Sockets;
 using System.Net;
 using System.Text;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Subscribers
 {
     public class Subscriber
     {
-        private int channelId;
+        bool isInitialized = false;
         public Subscriber()
         {
-            Console.WriteLine("Welcome to subscriber");
-            Console.WriteLine("Introduce channel id");
-            //var line = Console.ReadLine();
+            Console.WriteLine("Welcome to subscriber.");
 
-            //channelId = int.Parse(line);
-            channelId = 10;
+            // channelId = 10;
         }
 
         public void Connect()
@@ -26,22 +25,39 @@ namespace Subscribers
                 client = new TcpClient();
                 client.Connect(IPAddress.Loopback, 5600);
 
-                NetworkStream stream = client.GetStream();
-
-                var message = new Message
+                Console.WriteLine("Please introduce channel id (Add :)");
+                do
                 {
-                    ChannelId = channelId,
-                    IsSubscriber = true
-                };
+                    var line = Console.ReadLine();
 
-                var json = Newtonsoft.Json.JsonConvert.SerializeObject(message);
-                json += "ENDMSG";
-                byte[] data = Encoding.UTF8.GetBytes(json);
+                    if (line.Contains("Add :")){
+                        var channel = line.Replace("Add :", "");
+                        if (string.IsNullOrWhiteSpace(channel)){
+                            continue;
+                        }
+                        
+                        var message = new Message
+                        {
+                            ChannelId = channel,
+                            IsSubscriber = true
+                        };
+                        SendMessage(client, message);
+                        Console.WriteLine("Connected to broker at channel " + channel);
+                    
+                        if (!isInitialized){
+                            Task.Run(() => ReadMessages(client));
+                        }
+                        else
+                        {
+                            isInitialized = true;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Please introduce channel id (Add :)");
+                    }
 
-                stream.Write(data, 0, data.Length);
-
-                Console.WriteLine("Message sent");
-                ReadMessages(client);
+                }while(true);
             }
             catch (Exception e)
             {
@@ -56,6 +72,7 @@ namespace Subscribers
 
         private void ReadMessages(TcpClient tcpClient)
         {
+
             var stream = tcpClient.GetStream();
 
             while (true)
@@ -72,7 +89,25 @@ namespace Subscribers
                 while (!builder.ToString().EndsWith("ENDMSG"));
                 builder.Replace("ENDMSG", "");
 
-                Console.WriteLine("Received " + builder.ToString());
+                var messages = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Message>>(builder.ToString());
+                PrintMessages(messages);
+            }
+        }
+
+        private void SendMessage(TcpClient client, Message message){
+                NetworkStream stream = client.GetStream();
+
+                var json = Newtonsoft.Json.JsonConvert.SerializeObject(message);
+                json += "ENDMSG";
+                byte[] data = Encoding.UTF8.GetBytes(json);
+
+                stream.Write(data, 0, data.Length);
+        }
+
+        private void PrintMessages(List<Message> messages){
+            foreach (var message in messages)
+            {
+                Console.WriteLine($"{message.ChannelId} : {message.TimeCreated} : {message.Data}");
             }
         }
     }
