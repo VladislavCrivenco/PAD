@@ -1,0 +1,14 @@
+C:\Users\Dobri\Desktop\PAD\PROXY_API\bin\Debug\netcoreapp2.1\PROXY_API.deps.json
+C:\Users\Dobri\Desktop\PAD\PROXY_API\bin\Debug\netcoreapp2.1\PROXY_API.runtimeconfig.json
+C:\Users\Dobri\Desktop\PAD\PROXY_API\bin\Debug\netcoreapp2.1\PROXY_API.runtimeconfig.dev.json
+C:\Users\Dobri\Desktop\PAD\PROXY_API\bin\Debug\netcoreapp2.1\PROXY_API.dll
+C:\Users\Dobri\Desktop\PAD\PROXY_API\bin\Debug\netcoreapp2.1\PROXY_API.pdb
+C:\Users\Dobri\Desktop\PAD\PROXY_API\obj\Debug\netcoreapp2.1\PROXY_API.csprojAssemblyReference.cache
+C:\Users\Dobri\Desktop\PAD\PROXY_API\obj\Debug\netcoreapp2.1\PROXY_API.csproj.CoreCompileInputs.cache
+C:\Users\Dobri\Desktop\PAD\PROXY_API\obj\Debug\netcoreapp2.1\PROXY_API.RazorAssemblyInfo.cache
+C:\Users\Dobri\Desktop\PAD\PROXY_API\obj\Debug\netcoreapp2.1\PROXY_API.RazorAssemblyInfo.cs
+C:\Users\Dobri\Desktop\PAD\PROXY_API\obj\Debug\netcoreapp2.1\PROXY_API.AssemblyInfoInputs.cache
+C:\Users\Dobri\Desktop\PAD\PROXY_API\obj\Debug\netcoreapp2.1\PROXY_API.AssemblyInfo.cs
+C:\Users\Dobri\Desktop\PAD\PROXY_API\obj\Debug\netcoreapp2.1\PROXY_API.RazorTargetAssemblyInfo.cache
+C:\Users\Dobri\Desktop\PAD\PROXY_API\obj\Debug\netcoreapp2.1\PROXY_API.dll
+C:\Users\Dobri\Desktop\PAD\PROXY_API\obj\Debug\netcoreapp2.1\PROXY_API.pdb
