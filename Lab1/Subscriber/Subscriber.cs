@@ -29,9 +29,9 @@ namespace Subscribers
                 do
                 {
                     var line = Console.ReadLine();
-
+                    //line = "Add :10";
                     if (line.Contains("Add :")){
-                        var channel = line.Replace("Add :", "");
+                        var channel = line.Replace("Add :", "").Trim();
                         if (string.IsNullOrWhiteSpace(channel)){
                             continue;
                         }
@@ -46,18 +46,17 @@ namespace Subscribers
                     
                         if (!isInitialized){
                             Task.Run(() => ReadMessages(client));
-                        }
-                        else
-                        {
                             isInitialized = true;
                         }
+                        
                     }
                     else
                     {
                         Console.WriteLine("Please introduce channel id (Add :)");
                     }
 
-                }while(true);
+                }
+                while(true);
             }
             catch (Exception e)
             {

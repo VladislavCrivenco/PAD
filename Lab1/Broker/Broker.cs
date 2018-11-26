@@ -42,6 +42,7 @@ namespace Brokers
                 try
                 {
                     var clientSocket = m_mainSocket.Accept();
+                    Console.WriteLine("New client " + clientSocket.GetInfo());
                     Task.Run(() => ServeClient(clientSocket));
                 }
                 catch (Exception e)

@@ -1,0 +1,11 @@
+E:\UTM\PAD\Lab2\PROXY_API\obj\Debug\netcoreapp2.0\PROXY_API.csprojResolveAssemblyReference.cache
+E:\UTM\PAD\Lab2\PROXY_API\obj\Debug\netcoreapp2.0\PROXY_API.csproj.CoreCompileInputs.cache
+E:\UTM\PAD\Lab2\PROXY_API\obj\Debug\netcoreapp2.0\PROXY_API.AssemblyInfoInputs.cache
+E:\UTM\PAD\Lab2\PROXY_API\obj\Debug\netcoreapp2.0\PROXY_API.AssemblyInfo.cs
+E:\UTM\PAD\Lab2\PROXY_API\bin\Debug\netcoreapp2.0\PROXY_API.deps.json
+E:\UTM\PAD\Lab2\PROXY_API\bin\Debug\netcoreapp2.0\PROXY_API.runtimeconfig.json
+E:\UTM\PAD\Lab2\PROXY_API\bin\Debug\netcoreapp2.0\PROXY_API.runtimeconfig.dev.json
+E:\UTM\PAD\Lab2\PROXY_API\bin\Debug\netcoreapp2.0\PROXY_API.dll
+E:\UTM\PAD\Lab2\PROXY_API\bin\Debug\netcoreapp2.0\PROXY_API.pdb
+E:\UTM\PAD\Lab2\PROXY_API\obj\Debug\netcoreapp2.0\PROXY_API.dll
+E:\UTM\PAD\Lab2\PROXY_API\obj\Debug\netcoreapp2.0\PROXY_API.pdb

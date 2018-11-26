@@ -19,7 +19,7 @@ namespace SERVER_API
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-            .UseUrls("http://localhost:" + args[0])
+            .UseUrls("http://localhost:5001")
             .ConfigureAppConfiguration((hostingContext, config) =>
 
                 { 
