@@ -1,0 +1,10 @@
+@model PAD.Models.Employee
+
+<form method="post" action="/api/employee/add">
+    <!-- Input and Submit elements -->
+@Html.EditorFor((x) => x.Id)
+@Html.EditorFor((x) => x.Firstname)
+@Html.EditorFor((x) => x.Lastname)
+@Html.EditorFor((x) => x.Job)
+<button type="submit">Submit</button>
+</form>

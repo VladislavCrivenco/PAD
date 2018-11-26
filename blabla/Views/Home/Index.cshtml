@@ -1,0 +1,30 @@
+﻿@model List<PAD.Models.Employee>
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<script src="index.js"></script>
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Job</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var item in Model)
+    {
+    <tr>
+      <td scope="row">@item.Id</td>
+      <td>@item.Firstname</td>
+      <td>@item.Lastname</td>
+      <td>@item.Job</td>
+      <td ><span data-id="@item.Id" class="btn edit-btn">Edit</span> <span data-id="@item.Id" class="btn delete-btn">Delete</span></td>
+    </tr>
+    }
+  </tbody>
+</table>
